@@ -66,7 +66,7 @@ export default function SignUp() {
             }}
           >
             <Text style={{ fontSize: 16, color: "#858585" }}>
-              Already Have an account?
+              Already have an account?
             </Text>
             {"\t"}
             <Link href="/sign-in" style={{ fontSize: 16, color: "#0286FF" }}>
