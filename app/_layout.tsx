@@ -15,20 +15,20 @@ export default function Layout() {
     async function loadFonts() {
       try {
         await Font.loadAsync({
-          "PlusJakartaSans-Bold": require("../assets/fonts/PlusJakartaSans-Bold.ttf"),
-          "PlusJakartaSans-BoldItalic": require("../assets/fonts/PlusJakartaSans-BoldItalic.ttf"),
-          "PlusJakartaSans-ExtraBold": require("../assets/fonts/PlusJakartaSans-ExtraBold.ttf"),
-          "PlusJakartaSans-ExtraBoldItalic": require("../assets/fonts/PlusJakartaSans-ExtraBoldItalic.ttf"),
-          "PlusJakartaSans-ExtraLight": require("../assets/fonts/PlusJakartaSans-ExtraLight.ttf"),
-          "PlusJakartaSans-ExtraLightItalic": require("../assets/fonts/PlusJakartaSans-ExtraLightItalic.ttf"),
-          "PlusJakartaSans-Italic": require("../assets/fonts/PlusJakartaSans-Italic.ttf"),
-          "PlusJakartaSans-Light": require("../assets/fonts/PlusJakartaSans-Light.ttf"),
-          "PlusJakartaSans-LightItalic": require("../assets/fonts/PlusJakartaSans-LightItalic.ttf"),
-          "PlusJakartaSans-Medium": require("../assets/fonts/PlusJakartaSans-Medium.ttf"),
-          "PlusJakartaSans-MediumItalic": require("../assets/fonts/PlusJakartaSans-MediumItalic.ttf"),
-          "PlusJakartaSans-Regular": require("../assets/fonts/PlusJakartaSans-Regular.ttf"),
-          "PlusJakartaSans-SemiBold": require("../assets/fonts/PlusJakartaSans-SemiBold.ttf"),
-          "PlusJakartaSans-SemiBoldItalic": require("../assets/fonts/PlusJakartaSans-SemiBoldItalic.ttf"),
+          "Jakarta-Bold": require("../assets/fonts/PlusJakartaSans-Bold.ttf"),
+          "Jakarta-BoldItalic": require("../assets/fonts/PlusJakartaSans-BoldItalic.ttf"),
+          "Jakarta-ExtraBold": require("../assets/fonts/PlusJakartaSans-ExtraBold.ttf"),
+          "Jakarta-ExtraBoldItalic": require("../assets/fonts/PlusJakartaSans-ExtraBoldItalic.ttf"),
+          "Jakarta-ExtraLight": require("../assets/fonts/PlusJakartaSans-ExtraLight.ttf"),
+          "Jakarta-ExtraLightItalic": require("../assets/fonts/PlusJakartaSans-ExtraLightItalic.ttf"),
+          "Jakarta-Italic": require("../assets/fonts/PlusJakartaSans-Italic.ttf"),
+          "Jakarta-Light": require("../assets/fonts/PlusJakartaSans-Light.ttf"),
+          "Jakarta-LightItalic": require("../assets/fonts/PlusJakartaSans-LightItalic.ttf"),
+          "Jakarta-Medium": require("../assets/fonts/PlusJakartaSans-Medium.ttf"),
+          "Jakarta-MediumItalic": require("../assets/fonts/PlusJakartaSans-MediumItalic.ttf"),
+          "Jakarta-Regular": require("../assets/fonts/PlusJakartaSans-Regular.ttf"),
+          "Jakarta-SemiBold": require("../assets/fonts/PlusJakartaSans-SemiBold.ttf"),
+          "Jakarta-SemiBoldItalic": require("../assets/fonts/PlusJakartaSans-SemiBoldItalic.ttf"),
         });
 
         setFontsLoaded(true);
