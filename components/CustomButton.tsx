@@ -86,19 +86,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    elevation: 5,
     alignSelf: "stretch",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 6,
   },
   icon: {},
   text: {
-    fontFamily: "Jakarta-Bold",
+    fontFamily: "Jakarta-SemiBold",
     fontSize: 20,
   },
 });
