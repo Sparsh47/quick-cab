@@ -5,6 +5,11 @@ import "react-native-reanimated";
 import { useEffect, useCallback, useState } from "react";
 import { View } from "react-native";
 import * as Font from "expo-font";
+import { ClerkProvider, ClerkLoaded } from "@clerk/clerk-expo";
+import { tokenCache } from "@clerk/clerk-expo/token-cache";
+import { Slot } from "expo-router";
+
+const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
 SplashScreen.preventAutoHideAsync();
 
@@ -48,15 +53,23 @@ export default function Layout() {
 
   if (!fontsLoaded) return null;
 
+  if (!publishableKey) {
+    throw new Error("Publishable key is missing");
+  }
+
   return (
-    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      <Stack>
-        <Stack.Screen name="(root)" options={{ headerShown: false }} />
-        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </View>
+    <ClerkProvider tokenCache={tokenCache}>
+      <ClerkLoaded>
+        <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+          <Stack>
+            <Stack.Screen name="(root)" options={{ headerShown: false }} />
+            <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+            <Stack.Screen name="index" options={{ headerShown: false }} />
+            <Stack.Screen name="+not-found" />
+          </Stack>
+          <StatusBar style="auto" />
+        </View>
+      </ClerkLoaded>
+    </ClerkProvider>
   );
 }

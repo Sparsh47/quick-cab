@@ -44,7 +44,6 @@ export default function InputField({
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     flexDirection: "row",
     justifyContent: "flex-start",
     alignItems: "center",
