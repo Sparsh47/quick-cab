@@ -1,6 +1,7 @@
 import { useClerk } from "@clerk/clerk-expo";
 import * as Linking from "expo-linking";
-import { Text, TouchableOpacity } from "react-native";
+import { Alert, Image, TouchableOpacity } from "react-native";
+import { icons } from "@/constants";
 
 export const SignOutButton = () => {
   const { signOut } = useClerk();
@@ -9,14 +10,25 @@ export const SignOutButton = () => {
     try {
       await signOut();
       Linking.openURL(Linking.createURL("/"));
-    } catch (err) {
+    } catch (err: any) {
       console.error(JSON.stringify(err, null, 2));
+      Alert.alert("Error: ", err.errors[0].longMessage);
     }
   };
 
   return (
-    <TouchableOpacity onPress={handleSignOut}>
-      <Text>Sign out</Text>
+    <TouchableOpacity
+      onPress={handleSignOut}
+      style={{
+        backgroundColor: "#FFF",
+        width: 40,
+        height: 40,
+        borderRadius: 100,
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Image source={icons.out} style={{ width: 20, height: 20 }} />
     </TouchableOpacity>
   );
 };
